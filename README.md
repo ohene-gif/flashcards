@@ -32,7 +32,5 @@ Computer Science Interview Flashcards including:
 - Algorithms (DFS, BFS)
 - Big-O notation
 
----
 
-##  Demo
 
