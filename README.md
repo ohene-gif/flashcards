@@ -1,12 +1,12 @@
 # Flashcards App (Project 2 - Part 1)
 
-## 🧠 Overview
+##  Overview
 This is a flashcards web application built with React and Vite.  
 Users can study computer science concepts by flipping cards and navigating through random flashcards.
 
 ---
 
-## 🎯 Features
+## Features
 
 - [x] Displays title of card set
 - [x] Displays short description
@@ -22,7 +22,7 @@ Users can study computer science concepts by flipping cards and navigating throu
 
 ---
 
-## 🃏 Card Set
+##  Card Set
 Computer Science Interview Flashcards including:
 - HTML
 - CSS
@@ -34,5 +34,5 @@ Computer Science Interview Flashcards including:
 
 ---
 
-## 🎥 Demo
-Add your demo video or GIF here:
+##  Demo
+
