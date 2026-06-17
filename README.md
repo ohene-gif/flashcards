@@ -1,16 +1,38 @@
-# React + Vite
+# Flashcards App (Project 2 - Part 1)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🧠 Overview
+This is a flashcards web application built with React and Vite.  
+Users can study computer science concepts by flipping cards and navigating through random flashcards.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎯 Features
 
-## React Compiler
+- [x] Displays title of card set
+- [x] Displays short description
+- [x] Displays total number of cards
+- [x] Stores card data as question/answer pairs
+- [x] Shows one card at a time
+- [x] Clicking card flips between question and answer
+- [x] Clicking card again flips back
+- [x] Next button shows a random new card
+- [x] Uses React state (`useState`)
+- [x] Uses event handling (`onClick`)
+- [x] Uses a reusable component (`Card.jsx`)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🃏 Card Set
+Computer Science Interview Flashcards including:
+- HTML
+- CSS
+- React
+- Git
+- Data Structures (Stack, Queue)
+- Algorithms (DFS, BFS)
+- Big-O notation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🎥 Demo
+Add your demo video or GIF here:
