@@ -18,20 +18,50 @@ function App() {
 
   const [currentCard, setCurrentCard] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [guess, setGuess] = useState("");
+  const [feedback, setFeedback] = useState("");
+  const [currentStreak, setCurrentStreak] = useState(0);
+  const [longestStreak, setLongestStreak] = useState(0);
 
   const flipCard = () => {
     setIsFlipped(!isFlipped);
   };
 
+  const checkAnswer = () => {
+    if (
+      guess.trim().toLowerCase() ===
+      cards[currentCard].answer.toLowerCase()
+    ) {
+      setFeedback("✅ Correct!");
+
+      const newStreak = currentStreak + 1;
+      setCurrentStreak(newStreak);
+
+      if (newStreak > longestStreak) {
+        setLongestStreak(newStreak);
+      }
+    } else {
+      setFeedback("❌ Incorrect!");
+      setCurrentStreak(0);
+    }
+  };
+
   const nextCard = () => {
-    let randomIndex;
+    if (currentCard < cards.length - 1) {
+      setCurrentCard(currentCard + 1);
+      setIsFlipped(false);
+      setGuess("");
+      setFeedback("");
+    }
+  };
 
-    do {
-      randomIndex = Math.floor(Math.random() * cards.length);
-    } while (randomIndex === currentCard && cards.length > 1);
-
-    setCurrentCard(randomIndex);
-    setIsFlipped(false);
+  const prevCard = () => {
+    if (currentCard > 0) {
+      setCurrentCard(currentCard - 1);
+      setIsFlipped(false);
+      setGuess("");
+      setFeedback("");
+    }
   };
 
   return (
@@ -53,7 +83,35 @@ function App() {
         onFlip={flipCard}
       />
 
-      <button onClick={nextCard}>Next Random Card</button>
+      <br />
+
+      <input
+        type="text"
+        placeholder="Enter your guess"
+        value={guess}
+        onChange={(e) => setGuess(e.target.value)}
+      />
+
+      <button onClick={checkAnswer}>Submit Guess</button>
+
+      <p>{feedback}</p>
+
+      <p>Current Streak: {currentStreak}</p>
+      <p>Longest Streak: {longestStreak}</p>
+
+      <button
+        onClick={prevCard}
+        disabled={currentCard === 0}
+      >
+        Previous
+      </button>
+
+      <button
+        onClick={nextCard}
+        disabled={currentCard === cards.length - 1}
+      >
+        Next
+      </button>
     </div>
   );
 }
