@@ -53,15 +53,6 @@ Computer Science Interview Flashcards including:
 
 ---
 
-## GIF Walkthrough
-
-Add your GIF or video link here after uploading it to GitHub.
-
-Example:
-
-https://github.com/your-username/flashcards/assets/your-video-link
-
----
 
 ## Technologies Used
 
